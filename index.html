@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quote Search</h1>
+            <div class="search-info">
+                Found: <span id="matches-count">0</span> of <span id="total-quotes">0</span>
+            </div>
+        </header>
+        
+        <div class="search-arena">
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" placeholder="Find the hidden wisdom...">
+            </div>
+        </div>
+        
+   
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <div class="loading-text">Loading wisdom...</div>
+        </div>
+        
+        <div id="error" class="error" style="display: none;"></div>
+        
+        <div class="quotes-arena">
+            <ul id="quotes-list"></ul>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

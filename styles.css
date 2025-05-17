@@ -1,0 +1,188 @@
+/* Classic Literary Theme */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f1e6;
+    color: #333;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0d6c2;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0d6c2;
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    color: #5c4d3c;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b7866;
+    font-size: 1.2rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #d1c7b7;
+    border-radius: 2px;
+    font-size: 1rem;
+    background-color: #f9f7f2;
+    color: #5c4d3c;
+    font-family: 'Cormorant Garamond', serif;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #8b7866;
+    box-shadow: 0 0 0 1px #8b7866;
+}
+
+#search-input::placeholder {
+    color: #b3a99a;
+    font-style: italic;
+}
+
+#quotes-list {
+    list-style-type: none;
+}
+
+.quote-item {
+    background-color: #f9f7f2;
+    border-left: 4px solid #d1c7b7;
+    padding: 25px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.quote-item:hover {
+    background-color: #f5f1e6;
+    border-left-color: #8b7866;
+}
+
+.quote-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #5c4d3c;
+    quotes: "“" "”" "‘" "’";
+}
+
+.quote-text::before {
+    content: open-quote;
+    font-size: 2.5rem;
+    line-height: 0;
+    margin-right: 5px;
+    color: #d1c7b7;
+    vertical-align: -0.4em;
+}
+
+.quote-text::after {
+    content: close-quote;
+    font-size: 2.5rem;
+    line-height: 0;
+    margin-left: 5px;
+    color: #d1c7b7;
+    vertical-align: -0.6em;
+}
+
+.quote-author {
+    text-align: right;
+    font-style: italic;
+    color: #8b7866;
+    font-weight: 500;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px 0;
+    color: #8b7866;
+    font-style: italic;
+}
+
+.spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #8b7866;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    background-color: #f8e8e8;
+    color: #a05c5c;
+    padding: 15px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    border-left: 4px solid #a05c5c;
+}
+
+.no-results {
+    text-align: center;
+    padding: 30px 0;
+    color: #8b7866;
+    font-style: italic;
+}
+
+.search-info {
+    color: #8b7866;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .game-container {
+        padding: 20px;
+    }
+    
+    .game-header h1 {
+        font-size: 2rem;
+    }
+    
+    .quote-item {
+        padding: 20px;
+    }
+}
